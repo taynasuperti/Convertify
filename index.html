@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coinvertify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img src="img/logo-4.png" alt="Logo Coinvertify">
+        </div>
+        <ul class="navbar__links">
+            <li><a class="navbar__link" href="index.html">Início</a></li>
+            <li><a class="navbar__link" href="#">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="converter__container">
+        <header class="converter__header">
+            <h1 class="converter__title">Coinvertify</h1>
+            <p class="converter__subtitle">Converta seu dinheiro em tempo real!</p>
+        </header>
+
+        <main class="converter__main">
+            <input type="text" id="input-valor" class="converter__input"
+                placeholder="Digite o valor que deseja converter">
+
+            <div class="converter__options">
+                <select id="moeda-origem" class="converter__select">
+                    <option>Carregando...</option>
+                </select>
+
+                <select id="moeda-destino" class="converter__select">
+                    <option>Carregando...</option>
+                </select>
+
+                <button onclick="converter()" class="converter__button">Converter</button>
+            </div>
+
+            <div id="resultado" class="converter__resultado"></div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        Desenvolvido por Tayná Superti |
+        <a href="https://github.com/taynasuperti" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

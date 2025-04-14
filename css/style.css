@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #3a7a4e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar__logo {
+    width: 500px;
+    height: auto;
+}
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: #033b01;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+h1 {
+    color: #033b01;
+}
+
+/* Container principal de conversão */
+.converter__container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.50);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header */
+.converter__header {
+    margin-bottom: 1.5rem;
+}
+
+.converter__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.converter__subtitle {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Inputs e selects */
+.converter__input,
+.converter__select,
+.converter__button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(9, 43, 0, 0.5);
+    font-size: 1rem;
+}
+
+.converter__button {
+    background-color: #055702;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(9, 43, 0, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+.converter__button:hover {
+    background-color: #033b01;
+}
+
+/* Resultado */
+.converter__resultado {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #033b01;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #3a7a4e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 5px;
+}
