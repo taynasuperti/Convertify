@@ -79,6 +79,21 @@ h1 {
     color: #777;
 }
 
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    appearance: none;
+    cursor: pointer;
+}
+
+
 /* Inputs e selects */
 .converter__input,
 .converter__select,
