@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('../img/fundo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 
 /* Navbar */
 .navbar {
@@ -50,30 +38,41 @@ body {
     transition: color 0.3s;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/fundo.png');
+    background-size: 100% auto; /* preserva a proporção */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed; /* faz o fundo não rolar com o conteúdo */
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
 
 /* Novo container para centralizar e alinhar conteúdo em coluna */
+
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* fundo branco transparente p/ contraste */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    padding: 20px 10px;
 }
 
+/* Títulos */
 h1, h2 {
-    text-align: center;
+    text-align: left; /* agora alinhado à esquerda */
     margin-bottom: 20px;
     color: #033b01;
 }
 
+/* Parágrafos */
 p {
+    text-align: justify; /* opcional: deixa o texto mais fluido */
     margin-bottom: 20px;
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
 }
-
 
 /* Footer */
 .footer {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinvertify</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <img src="img/logo-4.png" alt="Logo Coinvertify" />
+      </div>
+      <ul class="navbar__links">
+        <li><a class="navbar__link" href="index.html">Início</a></li>
+        <li><a class="navbar__link" href="rendimento.html">Histórico de Rendimento</a></li>
+        <li><a class="navbar__link" href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Canvas para o gráfico -->
+    <div class="chart-container">
+      <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+  
+    <footer class="footer">
+      Desenvolvido por Tayná Superti |
+      <a href="https://github.com/taynasuperti" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/rendimento.js"></script>
+  </body>
+  
