@@ -5,39 +5,6 @@
 }
 
 
-/* Navbar */
-.navbar {
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #3a7a4e;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.navbar__logo {
-    width: 500px;
-    height: auto;
-}
-
-.navbar__links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    box-shadow: #033b01;
-}
-
-.navbar__link {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url('../img/fundo.png');
