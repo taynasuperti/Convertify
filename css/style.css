@@ -98,21 +98,3 @@ select {
     color: #163300;
 }
 
-/* Footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #163300;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 5px;
-}

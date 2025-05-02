@@ -40,22 +40,3 @@ p {
     color: #333;
     line-height: 1.6;
 }
-
-/* Footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #3a7a4e;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.footer a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 5px;
-}

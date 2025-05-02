@@ -21,7 +21,7 @@ async function carregarGrafico() {
 
     try {
         //aqui é feito a requisição para a API com a moeda e o período escolhido
-        const resposta = await fetch(`https://api.exchangerate.host/latest?base=${moedaEscolhida}&symbols=BRL`);
+        const resposta = await fetch(`https://api.exchangerate.host/timeseries?start_date=2024-01-01&end_date=2024-04-01&base=USD&symbols=BRL`);
         // depois que a resposta chega, a é necessário transformar ela em um formato que o javaScript entenda (por isso se chama JSON)
         
         // Transformando a resposta da API em formato JSON
