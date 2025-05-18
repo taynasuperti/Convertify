@@ -32,6 +32,19 @@ section {
   scroll-snap-align: start; /* Para rolagem suave entre seções */
 }
 
+#inicio {
+  background-color: #033b01;
+}
+
+#rendimento {
+  background-color: #1aaf15;
+}
+
+#sobre {
+  background-color: #163300;
+  color: #ffffff;
+}
+
 /* Estilos Gerais */
 h1,
 h2 {
