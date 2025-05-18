@@ -98,5 +98,6 @@ async function converter() {
     }
 }
 
+
 // chama a função para carregar as moedas ao carregar a página
 document.addEventListener('DOMContentLoaded', carregarMoedas);

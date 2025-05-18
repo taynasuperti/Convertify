@@ -1,11 +1,10 @@
 // server.js | meu servidor em back
 // coordena as rotas, escuta as requisições e envia respostas.
 
-const express = require('express'); //serve para "chamar" o express
+const express = require('express'); //serve para "chamar" o express | é quem cria o servidor
 const path = require('path'); //esse path é o modulo nativo do node, é com ele que se constrói caminhos de arquivos de forma segura 
-const axios = require('axios');
-const {converterMoeda} = require('./src/services/cotacao'); //para importar a funçao de cotação
-const { error } = require('console');
+const {getCotacao} = require('./src/controllers/cotacaoController'); //para importar a funçao de calcular a cotação
+const {getRendimento} = require('./src/controllers/rendimentoControllers'); // importa a função que busca o rendimento
 
 const app = express(); //cria o servidor do express | a variável app é usada para dps criar rotas e configurar o servidor
 const PORT = 3000; //serve para definir qual é a "porta" que o servidor vai rodar | 3000 é um número comum em ambientes de desenvolvimento
@@ -17,30 +16,12 @@ app.use(express.static(path.join(__dirname, 'public'))); //serve para acessar os
 // o _dirname é a variável que representa o caminho atual da pasta onde o server.js está
 // o path.join(_dirname) serve para juntar esses caminhos corretamente e evitar vulnerabilidades
 
-// aqui vai ser criado a rota para converter as moedas
-app.post('/converter', async (req, res) => {
-    const {valor, de, para} = req.body;
+// aqui vai ser chamado a função que está no controller para que as conversões sejam feitas
 
-    // aqui é comparação e verificação se há algum erro nos parâmentros
-    if (!valor || !de || !para) {
-        return res.status(400).send({error: 'Faltando parâmentros obrigatórios'});
-    }
-
-    try {
-            //aqui vai ser onde a função de conversão vai ser chamada
-    const valorConvertido = await converterMoeda(valor, de, para);
-
-    if (valorConvertido == null) {
-        return res.status(500).send({error:'Erro ao buscar a cotação'});
-    }
-
-    return res.json({valorConvertido});
-    }  catch (error) {
-        console.error(error);
-        return res.status(500).json({ erro: 'Erro interno no servidor' });
-    }
-
-});
+//esse GET é quem envia os dados pela URL
+app.get('/cotacao', getCotacao) // essa rota é quem chama a função do controller (cotacaoController.js)
+//esse GET é quem só busca os dados, sem precisar enviar nenhum parâmentro
+app.get('/rendimento',getRendimento) // essa rota usa a função do controller (rendimentoController.js)
 
 // inicia o servidor (faz as requisições)
 app.listen(PORT, () => { //aqui vem a a porta 3000 (PORT), assim quando estiver pronto, imprime no terminal que está funcionando.

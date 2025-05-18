@@ -1,4 +1,4 @@
-//esse é o front do projeto | vai cuidar da integração do back com front 
+//esse é o back do projeto |  
 const axios = require('axios'); //esse axios é quem faz as requisições em HTTP para retornar a taxa para converter as moedas
 
 //aqui vai ser a função que vai criar a conversão das moedas
