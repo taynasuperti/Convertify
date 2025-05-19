@@ -76,7 +76,7 @@
           <div class="filtros-grafico">
             <label for="moeda">Escolha a moeda:</label>
             <select
-              id="moeda"
+              id="seletorMoeda"
               aria-label="Escolha a moeda para visualizar o gráfico"
             >
               <option value="USD">Dólar Americano (USD)</option>
@@ -93,7 +93,7 @@
             </select>
           </div>
 
-          <canvas id="graficoMoeda" width="400" height="200"></canvas>
+          <canvas id="graficoRendimento" width="400" height="200"></canvas>
           <p id="mensagem-erro" style="color: red; display: none">
             Erro ao carregar dados do gráfico.
           </p>
@@ -169,6 +169,7 @@
       </a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/grafico.js"></script>
     <script src="./js/navigation.js"></script>

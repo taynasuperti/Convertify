@@ -18,4 +18,23 @@ const getRendimento = async (req, res) => { // req é o pedido feito pelo front 
     }
 };
 
-module.exports = { getRendimento }; // exporta a função para ser usada em outras partes do projeto
+//aqui vai chamar a função "buscarHistoricoMoeda" que está no services/rendimento.js
+const { buscarHistoricoMoeda } = require('../services/rendimento'); // chama a função buscarHistoricoMoeda lá do rendimento.js
+
+const getHistoricoMoeda = async (req, res) => {
+    const { moeda, dias } = req.query; // aqui pega os parâmetros que foram enviados pelo front
+
+    if (!moeda || !dias) {
+        return res.status(400).json({erro: 'Parâmetros inválidos. Certifique-se de enviar "moeda" e "dias".'}); // se não tiver os parâmetros, retorna um erro 400
+    }
+
+    try {
+        const historico = await buscarHistoricoMoeda(moeda, dias); // aqui o back pede os dados do rendimento.js | o await faz com que primeiro carregue todos os dados da API para depois entregar os resultados dentro da variável historico
+        res.json(historico); // converte a resposta da API em um "formato" que o front entende para enviar de volta
+    } catch (error) {
+        console.error(`Erro ao buscar hitórico da moeda ${moeda}:`, error.message);
+        res.status(500).json({ error: `Erro ao buscar histórico da moeda ${moeda}` }); // o erro 500 é o erro interno do servidor
+    }
+};
+
+module.exports = { getRendimento, getHistoricoMoeda }; // exporta a função para ser usada em outras partes do projeto
